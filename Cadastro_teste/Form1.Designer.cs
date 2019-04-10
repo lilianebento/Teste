@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -39,33 +37,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaptionText;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlText;
-            this.dateTimePicker1.Location = new System.Drawing.Point(357, 177);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(240, 20);
-            this.dateTimePicker1.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.textBox1.Location = new System.Drawing.Point(357, 287);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 20);
-            this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox2.Location = new System.Drawing.Point(357, 122);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(240, 20);
@@ -74,6 +56,7 @@
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox3.Location = new System.Drawing.Point(357, 69);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(240, 20);
@@ -82,11 +65,11 @@
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox4.Location = new System.Drawing.Point(355, 232);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(242, 20);
             this.textBox4.TabIndex = 4;
-            this.textBox4.TextChanged += new System.EventHandler(this.TextBox4_TextChanged);
             // 
             // label1
             // 
@@ -98,7 +81,6 @@
             this.label1.Size = new System.Drawing.Size(61, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "NOME:";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // label2
             // 
@@ -121,7 +103,6 @@
             this.label3.Size = new System.Drawing.Size(187, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "DATA DE NASCIMENTO:";
-            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label4
             // 
@@ -133,7 +114,6 @@
             this.label4.Size = new System.Drawing.Size(70, 17);
             this.label4.TabIndex = 8;
             this.label4.Text = "E-MAIL:";
-            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // label5
             // 
@@ -157,18 +137,6 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Teste";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::Cadastro_teste.Properties.Resources.LOGO;
-            this.pictureBox1.InitialImage = global::Cadastro_teste.Properties.Resources.LOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(334, 369);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -179,6 +147,41 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "Enviar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::Cadastro_teste.Properties.Resources.LOGO;
+            this.pictureBox1.InitialImage = global::Cadastro_teste.Properties.Resources.LOGO;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(334, 369);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.maskedTextBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.maskedTextBox1.Location = new System.Drawing.Point(355, 287);
+            this.maskedTextBox1.Mask = "000.000.000-00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(122, 25);
+            this.maskedTextBox1.TabIndex = 14;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.maskedTextBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox2.ForeColor = System.Drawing.SystemColors.Window;
+            this.maskedTextBox2.Location = new System.Drawing.Point(357, 178);
+            this.maskedTextBox2.Mask = "00/00/0000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(85, 26);
+            this.maskedTextBox2.TabIndex = 15;
             // 
             // Form1
             // 
@@ -187,6 +190,8 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(657, 369);
+            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
@@ -198,11 +203,10 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dateTimePicker1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "CADASTRO";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -210,9 +214,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
@@ -224,6 +225,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
     }
 }
 
